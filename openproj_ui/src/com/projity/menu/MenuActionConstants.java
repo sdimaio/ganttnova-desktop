@@ -145,6 +145,7 @@ public interface MenuActionConstants {
 	public static final String ACTION_FILTER                  = "Filter";
 	public static final String ACTION_GROUP                   = "Group";
 	public static final String ACTION_INFORMATION        	  = "Information";
+	public static final String ACTION_TASK_INSPECTOR          = "TaskInspector";
 	public static final String ACTION_NOTES              	  = "Notes";
 	public static final String ACTION_PROJECT_INFORMATION     = "ProjectInformation";
 	public static final String ACTION_TEAM_FILTER		      = "TeamFilter";

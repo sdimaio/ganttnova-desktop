@@ -106,7 +106,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
 import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
 import javax.swing.LookAndFeel;
@@ -415,6 +417,7 @@ public class GraphicManager implements  FrameHolder, NamedFrameListener, WindowS
 			}
 			//lafManager=new LafManager(this);
 		}
+		lafManager.setGraphicManager(this);
 		return lafManager;
 	}
 
@@ -966,6 +969,50 @@ public class GraphicManager implements  FrameHolder, NamedFrameListener, WindowS
 
 	}
 
+	public void doTaskInspectorDialog() {
+
+		if (!isDocumentActive())
+			return;
+
+		finishAnyOperations();
+	    List nodes=getCurrentFrame().getSelectedNodes(false);
+	    if (nodes == null || nodes.isEmpty()) {
+	    	Alert.warn(Messages.getString("TaskInspectorDialog.SelectTaskMessage"),getContainer()); //$NON-NLS-1$
+	    	return;
+	    }
+		if (nodes.size() > 1) {
+			Alert.warn(Messages.getString("Message.onlySelectOneElement"),getContainer()); //$NON-NLS-1$
+			return;
+		}
+		final Node node=(Node)nodes.get(0);
+		Object impl=node.getImpl();
+		Task task = null;
+		if (impl instanceof Task)
+			task = (Task)impl;
+		else if (impl instanceof Assignment)
+			task = ((Assignment)impl).getTask();
+		if (task == null) {
+			Alert.warn(Messages.getString("TaskInspectorDialog.SelectTaskMessage"),getContainer()); //$NON-NLS-1$
+			return;
+		}
+
+		JTextArea inspectorText = new JTextArea(TaskInspector.buildReport(task),24,72);
+		inspectorText.setEditable(false);
+		inspectorText.setLineWrap(true);
+		inspectorText.setWrapStyleWord(true);
+		inspectorText.setCaretPosition(0);
+		inspectorText.setFont(UIManager.getFont("Label.font")); //$NON-NLS-1$
+
+		JScrollPane scrollPane = new JScrollPane(inspectorText);
+		scrollPane.setPreferredSize(new Dimension(720,480));
+		scrollPane.setBorder(BorderFactory.createEmptyBorder());
+
+		JOptionPane.showMessageDialog(getFrame(),
+			scrollPane,
+			Messages.getString("TaskInspectorDialog.Title"), //$NON-NLS-1$
+			JOptionPane.INFORMATION_MESSAGE);
+	}
+
 
 	public Action getAction(String key) throws MissingListenerException {
 		if (actionsMap == null)
@@ -1005,6 +1052,7 @@ public class GraphicManager implements  FrameHolder, NamedFrameListener, WindowS
 		actionsMap.addHandler(ACTION_TEAM_FILTER, new TeamFilterAction());
 		actionsMap.addHandler(ACTION_DOCUMENTS, new DocumentsAction());
 		actionsMap.addHandler(ACTION_INFORMATION, new InformationAction());
+		actionsMap.addHandler(ACTION_TASK_INSPECTOR, new TaskInspectorAction());
 		actionsMap.addHandler(ACTION_NOTES, new NotesAction());
 		actionsMap.addHandler(ACTION_ASSIGN_RESOURCES, new AssignResourcesAction());
 
@@ -1537,6 +1585,13 @@ public class GraphicManager implements  FrameHolder, NamedFrameListener, WindowS
 		protected boolean allowed(boolean enable) {
 			if (enable==false) return true;
 			return isDocumentWritable();
+		}
+	}
+	public class TaskInspectorAction extends MenuActionsMap.DocumentMenuAction {
+		private static final long serialVersionUID = 1L;
+		public void actionPerformed(ActionEvent arg0) {
+			setMeAsLastGraphicManager();
+			doTaskInspectorDialog();
 		}
 	}
 	public class UpdateProjectAction extends MenuActionsMap.DocumentMenuAction {
@@ -2217,6 +2272,7 @@ protected boolean loadLocalDocument(String fileName,boolean merge){ //uses serve
 		//TODO set state of paste button
 		boolean isTask = currentImpl != null && currentImpl instanceof Task;
 		boolean isResource = currentImpl != null && currentImpl instanceof Resource;
+		boolean isTaskSelection = currentImpl != null && (currentImpl instanceof Task || currentImpl instanceof Assignment);
 		boolean isHasStartAndEnd = currentImpl != null && currentImpl instanceof HasStartAndEnd;
 		boolean writable = (currentImpl != null && !ClassUtils.isObjectReadOnly(currentImpl));
 		getMenuManager().setActionEnabled(ACTION_INDENT,!readOnly &&(isTask || isResource)&&(actions==null||actions.contains(ACTION_INDENT)));
@@ -2224,6 +2280,7 @@ protected boolean loadLocalDocument(String fileName,boolean merge){ //uses serve
 		getMenuManager().setActionEnabled(ACTION_LINK,isTask);
 		getMenuManager().setActionEnabled(ACTION_UNLINK,isTask);
 		getMenuManager().setActionEnabled(ACTION_ASSIGN_RESOURCES,isTask && writable);
+		getMenuManager().setActionEnabled(ACTION_TASK_INSPECTOR,isTaskSelection);
 		getMenuManager().setActionEnabled(ACTION_DELEGATE_TASKS,isTask && writable);
 		getMenuManager().setActionEnabled(ACTION_UPDATE_TASKS,!readOnly && isTask);
 
@@ -2680,7 +2737,33 @@ protected boolean loadLocalDocument(String fileName,boolean merge){ //uses serve
 		private static final long serialVersionUID = 1L;
 		public void actionPerformed(ActionEvent arg0) {
 			setMeAsLastGraphicManager();
-
+			String[] lookAndFeelIds = getLafManager().getAvailableLookAndFeelIds();
+			Object[] labels = new Object[lookAndFeelIds.length];
+			Object selectedLabel = null;
+			String currentLookAndFeelId = getLafManager().getPreferredLookAndFeelId();
+			for (int i = 0; i < lookAndFeelIds.length; i++) {
+				labels[i] = getLafManager().getLookAndFeelLabel(lookAndFeelIds[i]);
+				if (lookAndFeelIds[i].equals(currentLookAndFeelId))
+					selectedLabel = labels[i];
+			}
+			Object choice = JOptionPane.showInputDialog(getFrame(),
+				Messages.getString("LookAndFeelDialog.Message"), //$NON-NLS-1$
+				Messages.getString("LookAndFeelDialog.Title"), //$NON-NLS-1$
+				JOptionPane.PLAIN_MESSAGE,
+				null,
+				labels,
+				selectedLabel);
+			if (choice == null)
+				return;
+			for (int i = 0; i < labels.length; i++) {
+				if (labels[i].equals(choice) && getLafManager().setPreferredLookAndFeel(lookAndFeelIds[i])) {
+					JOptionPane.showMessageDialog(getFrame(),
+						Messages.getString("LookAndFeelDialog.RestartRequiredMessage"), //$NON-NLS-1$
+						Messages.getString("LookAndFeelDialog.Title"), //$NON-NLS-1$
+						JOptionPane.INFORMATION_MESSAGE);
+					return;
+				}
+			}
 		}
 	}
 

@@ -159,6 +159,7 @@ public class EnterpriseResource implements Resource {
 	protected int resourceType = ResourceType.WORK;
 	protected transient CostRateTables costRateTables = new CostRateTables();
 	protected double maximumUnits = 1.0D;
+	protected double defaultAssignmentUnits = 1.0D;
 	protected boolean generic = false;
 	protected boolean inactive = false;
 	protected transient CustomFieldsImpl customFields = new CustomFieldsImpl();
@@ -348,6 +349,15 @@ public class EnterpriseResource implements Resource {
 	 */
 	public void setMaximumUnits(double maxUnits) {
 		this.maximumUnits = maxUnits;
+	}
+	public double getDefaultAssignmentUnits() {
+		return defaultAssignmentUnits;
+	}
+	public void setDefaultAssignmentUnits(double defaultAssignmentUnits) {
+		if (defaultAssignmentUnits <= 0.0D) {
+			defaultAssignmentUnits = 1.0D;
+		}
+		this.defaultAssignmentUnits = defaultAssignmentUnits;
 	}
 	/**
 	 * @return
@@ -947,6 +957,9 @@ public class EnterpriseResource implements Resource {
 	}
 	private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException  {
 	    s.defaultReadObject();
+	    if (defaultAssignmentUnits <= 0.0D) {
+	    	defaultAssignmentUnits = 1.0D;
+	    }
 	    hasKey=HasKeyImpl.deserialize(s,this);
 	    costRateTables=CostRateTables.deserialize(s);
 	    try {
@@ -1081,6 +1094,9 @@ public class EnterpriseResource implements Resource {
 		return getMaterialLabel();
 	}
 	public boolean fieldHideOvertimeRate(FieldContext fieldContext) {
+		return !isLabor();
+	}
+	public boolean fieldHideDefaultAssignmentUnits(FieldContext fieldContext) {
 		return !isLabor();
 	}
 

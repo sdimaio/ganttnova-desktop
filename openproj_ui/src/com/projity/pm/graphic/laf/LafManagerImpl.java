@@ -55,6 +55,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Shape;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.prefs.Preferences;
 
 import javax.swing.JComponent;
 import javax.swing.JPanel;
@@ -67,15 +70,27 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import com.projity.graphic.configuration.shape.Colors;
 import com.projity.pm.graphic.frames.GraphicManager;
+import com.projity.strings.Messages;
 import com.projity.util.Environment;
 
 public class LafManagerImpl implements LafManager {
+	private static final String LOOK_AND_FEEL_PREFERENCE_KEY = "lookAndFeelPreference"; //$NON-NLS-1$
+	private static final String LOOK_AND_FEEL_AUTO = "auto"; //$NON-NLS-1$
+	private static final String LOOK_AND_FEEL_FLAT = "flat"; //$NON-NLS-1$
+	private static final String LOOK_AND_FEEL_SYSTEM = "system"; //$NON-NLS-1$
+	private static final String LOOK_AND_FEEL_NIMBUS = "nimbus"; //$NON-NLS-1$
+	private static final String LOOK_AND_FEEL_METAL = "metal"; //$NON-NLS-1$
+	private static final Preferences PREFERENCES = Preferences.userNodeForPackage(LafManagerImpl.class);
     protected static LookAndFeel plaf = null; // for substance
-    protected static GraphicManager graphicManager;
+    protected GraphicManager graphicManager;
 	private static Boolean lafOK = null;
     public LafManagerImpl(GraphicManager graphicManager){
-    	this.graphicManager=graphicManager;
+    	setGraphicManager(graphicManager);
     }
+
+	public void setGraphicManager(GraphicManager graphicManager) {
+		this.graphicManager = graphicManager;
+	}
 
 	/* (non-Javadoc)
 	 * @see com.projity.pm.graphic.laf.LafManager1#clean()
@@ -107,24 +122,90 @@ public class LafManagerImpl implements LafManager {
     public LookAndFeel getPlaf() {
     	if (plaf == null) {
 			try {
-						int os=Environment.getOs();
-						if (os==Environment.LINUX/*||os==Environment.MAC*/) //$NON-NLS-1$ //$NON-NLS-2$
-								UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel"); //$NON-NLS-1$
-								//UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
-						else {
-							UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-							plaf = UIManager.getLookAndFeel();
-							return plaf;
-						}
-		    			plaf = UIManager.getLookAndFeel();
-
+				installConfiguredLookAndFeel();
+	    		plaf = UIManager.getLookAndFeel();
 			} catch (Exception e) {
-				e.printStackTrace();
+				try {
+					UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel"); //$NON-NLS-1$
+					plaf = UIManager.getLookAndFeel();
+				} catch (Exception secondary) {
+					secondary.printStackTrace();
+				}
 			}
+			applyModernDefaults();
 			if (graphicManager!=null) SwingUtilities.updateComponentTreeUI(graphicManager.getContainer());
     	}
     	return plaf;
     }
+
+	private void installConfiguredLookAndFeel() throws Exception {
+		if (tryInstallSelectedLookAndFeel(getPreferredLookAndFeelId()))
+			return;
+		if (tryInstallFlatLaf())
+			return;
+		if (trySetLookAndFeel(UIManager.getSystemLookAndFeelClassName()))
+			return;
+		if (trySetLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel")) //$NON-NLS-1$
+			return;
+		UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel"); //$NON-NLS-1$
+	}
+
+	private boolean tryInstallFlatLaf() {
+		String className = getFlatLookAndFeelClassName();
+		return className != null && trySetLookAndFeel(className);
+	}
+
+	private boolean tryInstallSelectedLookAndFeel(String lookAndFeelId) {
+		String className = getConfiguredLookAndFeelClassName(lookAndFeelId);
+		return className != null && trySetLookAndFeel(className);
+	}
+
+	private String getConfiguredLookAndFeelClassName(String lookAndFeelId) {
+		if (LOOK_AND_FEEL_FLAT.equals(lookAndFeelId))
+			return getFlatLookAndFeelClassName();
+		if (LOOK_AND_FEEL_SYSTEM.equals(lookAndFeelId))
+			return UIManager.getSystemLookAndFeelClassName();
+		if (LOOK_AND_FEEL_NIMBUS.equals(lookAndFeelId))
+			return "javax.swing.plaf.nimbus.NimbusLookAndFeel"; //$NON-NLS-1$
+		if (LOOK_AND_FEEL_METAL.equals(lookAndFeelId))
+			return "javax.swing.plaf.metal.MetalLookAndFeel"; //$NON-NLS-1$
+		return null;
+	}
+
+	private String getFlatLookAndFeelClassName() {
+		if (Environment.isMac() && isLookAndFeelClassAvailable("com.formdev.flatlaf.themes.FlatMacLightLaf")) //$NON-NLS-1$
+			return "com.formdev.flatlaf.themes.FlatMacLightLaf"; //$NON-NLS-1$
+		if (isLookAndFeelClassAvailable("com.formdev.flatlaf.FlatLightLaf")) //$NON-NLS-1$
+			return "com.formdev.flatlaf.FlatLightLaf"; //$NON-NLS-1$
+		return null;
+	}
+
+	private boolean isLookAndFeelClassAvailable(String className) {
+		try {
+			Class.forName(className);
+			return true;
+		} catch (Throwable t) {
+			return false;
+		}
+	}
+
+	private boolean trySetLookAndFeel(String className) {
+		try {
+			Class.forName(className);
+			UIManager.setLookAndFeel(className);
+			return true;
+		} catch (Throwable t) {
+			return false;
+		}
+	}
+
+	private void applyModernDefaults() {
+		UIManager.put("Component.arc", Integer.valueOf(12)); //$NON-NLS-1$
+		UIManager.put("Button.arc", Integer.valueOf(14)); //$NON-NLS-1$
+		UIManager.put("ScrollBar.width", Integer.valueOf(14)); //$NON-NLS-1$
+		UIManager.put("Table.showHorizontalLines", Boolean.TRUE); //$NON-NLS-1$
+		UIManager.put("Table.showVerticalLines", Boolean.FALSE); //$NON-NLS-1$
+	}
 
     /* (non-Javadoc)
 	 * @see com.projity.pm.graphic.laf.LafManager1#initLookAndFeel()
@@ -196,6 +277,66 @@ public class LafManagerImpl implements LafManager {
 			return Environment.isMac()?Colors.VERY_LIGHT_GRAY:laf.getDefaults().getColor("TableHeader.background");//table.getTableHeader ().getBackground()
 		else
 			return laf.getDefaults().getColor("TableHeader.focusCellForeground");
+	}
+
+	public String[] getAvailableLookAndFeelIds() {
+		List<String> lookAndFeelIds = new ArrayList<String>();
+		lookAndFeelIds.add(LOOK_AND_FEEL_AUTO);
+		if (getFlatLookAndFeelClassName() != null)
+			lookAndFeelIds.add(LOOK_AND_FEEL_FLAT);
+		lookAndFeelIds.add(LOOK_AND_FEEL_SYSTEM);
+		if (isLookAndFeelClassAvailable("javax.swing.plaf.nimbus.NimbusLookAndFeel")) //$NON-NLS-1$
+			lookAndFeelIds.add(LOOK_AND_FEEL_NIMBUS);
+		lookAndFeelIds.add(LOOK_AND_FEEL_METAL);
+		return lookAndFeelIds.toArray(new String[lookAndFeelIds.size()]);
+	}
+
+	public String getPreferredLookAndFeelId() {
+		String lookAndFeelId = PREFERENCES.get(LOOK_AND_FEEL_PREFERENCE_KEY, LOOK_AND_FEEL_AUTO);
+		return normalizeStoredLookAndFeelId(lookAndFeelId);
+	}
+
+	private String normalizeStoredLookAndFeelId(String lookAndFeelId) {
+		if (isSupportedLookAndFeelId(lookAndFeelId))
+			return lookAndFeelId;
+		return LOOK_AND_FEEL_AUTO;
+	}
+
+	private boolean isSupportedLookAndFeelId(String lookAndFeelId) {
+		if (lookAndFeelId == null)
+			return false;
+		if (LOOK_AND_FEEL_AUTO.equals(lookAndFeelId))
+			return true;
+		String[] availableLookAndFeels = getAvailableLookAndFeelIds();
+		for (int i = 0; i < availableLookAndFeels.length; i++) {
+			if (availableLookAndFeels[i].equals(lookAndFeelId))
+				return true;
+		}
+		return false;
+	}
+
+	public String getLookAndFeelLabel(String lookAndFeelId) {
+		if (LOOK_AND_FEEL_AUTO.equals(lookAndFeelId))
+			return Messages.getString("LookAndFeelDialog.Auto"); //$NON-NLS-1$
+		if (LOOK_AND_FEEL_FLAT.equals(lookAndFeelId))
+			return Messages.getString("LookAndFeelDialog.Flat"); //$NON-NLS-1$
+		if (LOOK_AND_FEEL_SYSTEM.equals(lookAndFeelId))
+			return Messages.getString("LookAndFeelDialog.System"); //$NON-NLS-1$
+		if (LOOK_AND_FEEL_NIMBUS.equals(lookAndFeelId))
+			return Messages.getString("LookAndFeelDialog.Nimbus"); //$NON-NLS-1$
+		if (LOOK_AND_FEEL_METAL.equals(lookAndFeelId))
+			return Messages.getString("LookAndFeelDialog.Metal"); //$NON-NLS-1$
+		return lookAndFeelId;
+	}
+
+	public boolean setPreferredLookAndFeel(String lookAndFeelId) {
+		if (!isSupportedLookAndFeelId(lookAndFeelId))
+			return false;
+		String currentLookAndFeelId = getPreferredLookAndFeelId();
+		if (currentLookAndFeelId.equals(lookAndFeelId))
+			return false;
+		PREFERENCES.put(LOOK_AND_FEEL_PREFERENCE_KEY, lookAndFeelId);
+		return true;
 	}
 
 	public void dumpUIValues() {

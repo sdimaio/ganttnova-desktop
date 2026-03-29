@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.projectlibre</groupId>
+	<artifactId>projectlibre-parent</artifactId>
+	<version>1.6.2-modernized-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>ProjectLibre Modernized Parent</name>
+
+	<modules>
+		<module>projectlibre-thirdparty</module>
+		<module>projectlibre-app</module>
+	</modules>
+
+	<properties>
+		<maven.compiler.release>8</maven.compiler.release>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<projectlibre.distributionVersion>1.6.2</projectlibre.distributionVersion>
+		<junit.version>4.13.2</junit.version>
+		<jaxb.runtime.version>2.3.8</jaxb.runtime.version>
+		<flatlaf.version>3.5.4</flatlaf.version>
+		<maven.antrun.version>3.1.0</maven.antrun.version>
+		<maven.buildhelper.version>3.5.0</maven.buildhelper.version>
+		<maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+		<maven.dependency.plugin.version>3.6.1</maven.dependency.plugin.version>
+		<maven.jar.plugin.version>3.4.2</maven.jar.plugin.version>
+		<maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
+		<maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jaxb</groupId>
+				<artifactId>jaxb-runtime</artifactId>
+				<version>${jaxb.runtime.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.formdev</groupId>
+				<artifactId>flatlaf</artifactId>
+				<version>${flatlaf.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${maven.antrun.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>${maven.buildhelper.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<release>${maven.compiler.release}</release>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven.dependency.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven.jar.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven.resources.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven.surefire.plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

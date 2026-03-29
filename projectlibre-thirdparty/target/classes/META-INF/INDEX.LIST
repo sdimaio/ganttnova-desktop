@@ -1,0 +1,11 @@
+JarIndex-Version: 1.0
+
+jdnc-xml.jar
+org
+org/jdesktop
+org/jdesktop/jdnc
+org/jdesktop/jdnc/markup
+org/jdesktop/jdnc/markup/attr
+org/jdesktop/jdnc/markup/elem
+org/jdesktop/jdnc/markup/resources
+

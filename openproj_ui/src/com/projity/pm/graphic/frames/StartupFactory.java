@@ -112,6 +112,18 @@ public abstract class StartupFactory {
 //		System.out.println("---------- StartupFactory");
 	}
 
+	private static boolean isModernizedStartupToggleEnabled(String propertyName) {
+		return Boolean.parseBoolean(System.getProperty(propertyName, "false"));
+	}
+
+	private static boolean shouldShowLegacyStartupDialogs() {
+		return isModernizedStartupToggleEnabled("projectlibre.showStartupDialogs");
+	}
+
+	private static boolean shouldShowStartupTips() {
+		return isModernizedStartupToggleEnabled("projectlibre.showStartupTips");
+	}
+
 	/**
 	 * Used to test restoring of workspace to simulate applet restart
 	 * @param old
@@ -165,7 +177,7 @@ public abstract class StartupFactory {
 //		System.out.println("---------- StartupFactory instanceFromNewSession#1 main");
 		Environment.setClientSide(true);
 
-		System.setSecurityManager(null);
+		disableLegacySecurityManager();
 		Thread loadConfigThread=new Thread("loadConfig"){
 			public void run() {
 				long t=System.currentTimeMillis();
@@ -257,6 +269,15 @@ public abstract class StartupFactory {
 
 	public void doLoadConfig() {
 		com.projity.init.Init.initialize();
+	}
+
+	private void disableLegacySecurityManager() {
+		try {
+			Class securityManagerClass = Class.forName("java.lang.SecurityManager");
+			System.class.getMethod("setSecurityManager", new Class[]{securityManagerClass}).invoke(null, new Object[]{null});
+		} catch (Throwable t) {
+			// Newer JDKs deprecate or remove the legacy security manager API.
+		}
 	}
 	public void doPostInitView(Container container) {
 	}
@@ -446,16 +467,19 @@ public abstract class StartupFactory {
 				SwingUtilities.invokeLater(new Runnable() {
 					public void run() {
 						if (Environment.isOpenProj()&&!Environment.isPlugin()) {
-							LicenseDialog.showDialog(gm.getFrame(),false);
-							UserInfoDialog.showDialog(gm.getFrame(),false);
+							if (shouldShowLegacyStartupDialogs()) {
+								LicenseDialog.showDialog(gm.getFrame(),false);
+								UserInfoDialog.showDialog(gm.getFrame(),false);
+							}
 //							DonateDialog.maybeShow(gm.getFrame(),false);
 //							TryPODDialog.maybeShow(gm.getFrame(),false); //claur
 							UpdateChecker.checkForUpdateInBackground();
 						}
 						if (welcome&&!Environment.isPlugin()) {
 							if (Environment.isOpenProj()) {
-								//LicenseDialog.showDialog(gm.getFrame(),false);
-								TipOfTheDay.showDialog(gm.getFrame(), false);
+								if (shouldShowStartupTips()) {
+									TipOfTheDay.showDialog(gm.getFrame(), false);
+								}
 							} else {
 								if (Environment.isNeedToRestart())
 									return;

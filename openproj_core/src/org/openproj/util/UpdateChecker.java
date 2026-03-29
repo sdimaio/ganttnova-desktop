@@ -80,7 +80,15 @@ public class UpdateChecker {
 	private static final int UPDATE_CHECKER_VERSION=1;
 	private static final String updateAddress = "http://projectlibre.org/versions-"+UPDATE_CHECKER_VERSION; //claur openproj.org version not working any more
 	private static final String downloadAddress = "http://sourceforge.net/projects/projectlibre/files/latest/download";
+
+	private static boolean isEnabled() {
+		return Boolean.parseBoolean(System.getProperty("projectlibre.checkForUpdates", "false"));
+	}
+
 	private static void checkForUpdate() {
+		if (!isEnabled()) {
+			return;
+		}
 		if (! Preferences.userNodeForPackage(UpdateChecker.class).getBoolean("checkForUpdates", true) ) {
 			return;
 		}
@@ -202,6 +210,9 @@ public class UpdateChecker {
 
 
 	public static void checkForUpdateInBackground() {
+		if (!isEnabled()) {
+			return;
+		}
 		new Thread(new Runnable() {
 			public void run() {
 				checkForUpdate();

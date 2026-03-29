@@ -1,0 +1,6 @@
+com/projity/pm/task/NormalTaskEffortTest.class
+org/projectlibre/modernization/ClasspathResourcesTest.class
+com/projity/pm/task/ResourceDefaultAllocationTest.class
+com/projity/graphic/configuration/ActionListFactoryCompatibilityTest.class
+com/projity/pm/graphic/frames/TaskInspectorTest.class
+com/projity/pm/graphic/laf/LafManagerImplTest.class

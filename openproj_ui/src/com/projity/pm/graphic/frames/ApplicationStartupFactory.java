@@ -90,8 +90,10 @@ public class ApplicationStartupFactory extends StartupFactory {
 		if (font==null){
 			String javaVendor=System.getProperty("java.vendor");
 			if (javaVendor.startsWith("IBM")){ //to avoid font bug on SLED with IBM jvm
-				font=FontUtil.getValidFont(new String[]{"DejaVu Sans","Andale Sans"}); //Lucida Sans
+				font=withDefaultSize(FontUtil.getValidFont(new String[]{"DejaVu Sans","Andale Sans"})); //Lucida Sans
 			}
+			if (font==null)
+				font=resolvePreferredUiFont();
 		}else{
 			font=font.replace('_', ' ');
 		}
@@ -117,6 +119,26 @@ public class ApplicationStartupFactory extends StartupFactory {
 
 		if (Settings.VERSION_TYPE_STANDALONE.equals(getOpt("versionType"))) Environment.setStandAlone(true);
 
+	}
+
+	private String resolvePreferredUiFont() {
+		String[] candidates;
+		if (Environment.isWindows())
+			candidates = new String[]{"Segoe UI","Inter","Noto Sans","Arial"};
+		else if (Environment.isMac())
+			candidates = new String[]{"SF Pro Text","Helvetica Neue","Helvetica","Arial"};
+		else
+			candidates = new String[]{"Inter","Noto Sans","Cantarell","DejaVu Sans","Liberation Sans"};
+
+		return withDefaultSize(FontUtil.getValidFont(candidates));
+	}
+
+	private String withDefaultSize(String font) {
+		if (font == null)
+			return null;
+		if (font.matches(".*-\\d+$"))
+			return font;
+		return font + "-13";
 	}
 
 	protected void abort() {

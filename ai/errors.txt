@@ -1,0 +1,696 @@
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ ./run-projectlibre.sh 
+Conf file /home/sdimaio/.projectlibre found
+opts:
+POD Version: 1.6.2 local version 1.6.2 updated=false java version=21
+Invalid item: ProjectLibre it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: Palette it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: LookAndFeel it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: FullScreen it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: Refresh it must be a menu item in the menu properties, even if it's only shown in a toolbar
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=0, day=work day Thu Jan 01 01:00:00 CET 1970 983006010
+WorkingHours
+
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 983006010
+WorkingHours
+
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 1181287650
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 1181287650
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 1181287650
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 1181287650
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@1ad55b1e, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 1181287650
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=0, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@22701a93, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 1938057791
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=0, day=null
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 2089538929
+WorkingHours
+
+Range 0 - 23:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 1577970929
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 1577970929
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 1577970929
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 1577970929
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@72cb91de, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 235450525
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@2ae9c6e8, from=com.projity.pm.calendar.WorkWeek@1ad55b1e
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.clone, com.projity.pm.calendar.WorkWeek@2ae9c6e8
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:50:43 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@74dfb1a3, from=com.projity.pm.calendar.WorkWeek@5bb74c78
+Project returned
+mar 29, 2026 11:50:58 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:51:21 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+Si devono inserire risorse già esistenti nel pool di risorse separate dal carattere ";". Se si desidera assegnare meno del 100%, è possibile specificare una percentuale tra parentesi: e.g. Clark Kent[50%];Lois Lane
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.projity.field.Field.setInternalValue(Field.java:1015)
+	at com.projity.field.Field.setInternalValueAndUpdate(Field.java:896)
+	at com.projity.field.Field.setValue(Field.java:890)
+	at com.projity.field.Field.setValue(Field.java:871)
+	at com.projity.grouping.core.model.DefaultNodeModel.setFieldValue(DefaultNodeModel.java:671)
+	at com.projity.pm.graphic.spreadsheet.SpreadSheetModel.setValueAt(SpreadSheetModel.java:167)
+	at java.desktop/javax.swing.JTable.setValueAt(JTable.java:2793)
+	at com.projity.pm.graphic.spreadsheet.common.CommonSpreadSheet.setValueAt(CommonSpreadSheet.java:599)
+	at java.desktop/javax.swing.JTable.editingStopped(JTable.java:4791)
+	at java.desktop/javax.swing.AbstractCellEditor.fireEditingStopped(AbstractCellEditor.java:152)
+	at java.desktop/javax.swing.DefaultCellEditor$EditorDelegate.stopCellEditing(DefaultCellEditor.java:375)
+	at java.desktop/javax.swing.DefaultCellEditor.stopCellEditing(DefaultCellEditor.java:234)
+	at com.projity.pm.graphic.spreadsheet.editor.SimpleEditor.stopCellEditing(SimpleEditor.java:168)
+	at com.projity.pm.graphic.spreadsheet.editor.SpreadSheetCellEditorAdapter.stopCellEditing(SpreadSheetCellEditorAdapter.java:167)
+	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Actions.actionPerformed(BasicTableUI.java:516)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2956)
+	at java.desktop/javax.swing.JTable.processKeyBinding(JTable.java:5327)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:3018)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2918)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6398)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1146)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4877)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.projity.field.FieldParseException: Si devono inserire risorse già esistenti nel pool di risorse separate dal carattere ";". Se si desidera assegnare meno del 100%, è possibile specificare una percentuale tra parentesi: e.g. Clark Kent[50%];Lois Lane
+	at com.projity.association.AssociationList.setAssociations(AssociationList.java:157)
+	at com.projity.pm.task.NormalTask.setResourceNames(NormalTask.java:919)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	... 52 more
+error message Si devono inserire risorse già esistenti nel pool di risorse separate dal carattere ";". Se si desidera assegnare meno del 100%, è possibile specificare una percentuale tra parentesi: e.g. Clark Kent[50%];Lois Lane
+mar 29, 2026 11:53:24 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:53:24 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.clone, com.projity.pm.calendar.WorkWeek@74dfb1a3
+mar 29, 2026 11:53:24 AM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 11:53:24 AM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@1852af75, from=com.projity.pm.calendar.WorkWeek@654e5992
+Document Frame Cleanup
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ 
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ ls -lrth
+totale 56K
+-rw-rw-r--  1 sdimaio sdimaio  451 mar 29 03:02 README.md
+drwxrwxr-x  4 sdimaio sdimaio 4,0K mar 29 03:02 openproj_core
+drwxrwxr-x  4 sdimaio sdimaio 4,0K mar 29 03:02 openproj_ui
+drwxrwxr-x  3 sdimaio sdimaio 4,0K mar 29 03:02 openproj_reports
+drwxrwxr-x  5 sdimaio sdimaio 4,0K mar 29 03:02 openproj_exchange
+drwxrwxr-x  4 sdimaio sdimaio 4,0K mar 29 03:02 projectlibre_core
+drwxrwxr-x  5 sdimaio sdimaio 4,0K mar 29 03:02 projectlibre_exchange
+drwxrwxr-x 10 sdimaio sdimaio 4,0K mar 29 03:11 openproj_build
+drwxrwxr-x  7 sdimaio sdimaio 4,0K mar 29 03:16 openproj_contrib
+-rw-rw-r--  1 sdimaio sdimaio 3,6K mar 29 03:41 pom.xml
+drwxrwxr-x  3 sdimaio sdimaio 4,0K mar 29 11:40 projectlibre-thirdparty
+drwxrwxr-x  4 sdimaio sdimaio 4,0K mar 29 11:40 projectlibre-app
+-rwxrwxr-x  1 sdimaio sdimaio  480 mar 29 11:46 run-projectlibre.sh
+drwxrwxr-x  2 sdimaio sdimaio 4,0K mar 29 12:22 ai
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ ./run-projectlibre.sh 
+Conf file /home/sdimaio/.projectlibre found
+opts:
+POD Version: 1.6.2 local version 1.6.2 updated=false java version=21
+Invalid item: ProjectLibre it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: Palette it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: LookAndFeel it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: FullScreen it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Invalid item: Refresh it must be a menu item in the menu properties, even if it's only shown in a toolbar
+Exception in thread "main" org.apache.batik.util.gui.resource.MissingListenerException: no listener for mainFrame (LookAndFeelAction, bundle: com.projity.pm.graphic.frames.GraphicManager)
+	at com.projity.pm.graphic.frames.GraphicManager.getAction(GraphicManager.java:977)
+	at org.apache.batik.util.gui.resource.ButtonFactory.createRibbonButton(ButtonFactory.java:247)
+	at org.apache.batik.util.gui.resource.RibbonFactory.createCommandButton(RibbonFactory.java:301)
+	at org.apache.batik.util.gui.resource.RibbonFactory.createRibbonBand(RibbonFactory.java:195)
+	at org.apache.batik.util.gui.resource.RibbonFactory.createRibbonTask(RibbonFactory.java:155)
+	at org.apache.batik.util.gui.resource.RibbonFactory.createRibbon(RibbonFactory.java:139)
+	at com.projity.menu.MenuManager.getRibbon(MenuManager.java:211)
+	at com.projity.pm.graphic.frames.GraphicManager.setRibbon(GraphicManager.java:2391)
+	at com.projity.pm.graphic.frames.GraphicManager.setToolBarAndMenus(GraphicManager.java:2481)
+	at com.projity.pm.graphic.frames.GraphicManager.initView(GraphicManager.java:2890)
+	at com.projity.pm.graphic.frames.StartupFactory.instanceFromNewSession(StartupFactory.java:243)
+	at com.projity.pm.graphic.gantt.Main.main(Main.java:109)
+	at com.projity.main.Main.main(Main.java:103)
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ ./run-projectlibre.sh 
+Conf file /home/sdimaio/.projectlibre found
+opts:
+POD Version: 1.6.2 local version 1.6.2 updated=false java version=21
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=0, day=work day Thu Jan 01 01:00:00 CET 1970 1026167355
+WorkingHours
+
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 1026167355
+WorkingHours
+
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 2028275887
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 2028275887
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 2028275887
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 2028275887
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@7678981e, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 2028275887
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=0, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@200d460a, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 1384086723
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=0, day=null
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 1876545623
+WorkingHours
+
+Range 0 - 23:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 623834800
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 623834800
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 623834800
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 623834800
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@3fa9177d, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 211689394
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@d5638b0, from=com.projity.pm.calendar.WorkWeek@7678981e
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.clone, com.projity.pm.calendar.WorkWeek@d5638b0
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:43:27 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@2b28db0f, from=com.projity.pm.calendar.WorkWeek@2fcda57
+Project returned
+Document Frame Cleanup
+Exception in thread "AWT-EventQueue-0" java.lang.IllegalArgumentException: Can't remove JRibbon component
+	at org.pushingpixels.flamingo.api.ribbon.JRibbonFrame$RibbonFrameLayout.removeLayoutComponent(JRibbonFrame.java:109)
+	at java.desktop/java.awt.Container.removeAll(Container.java:1329)
+	at com.projity.pm.graphic.frames.StartupFactory.restart(StartupFactory.java:136)
+	at com.projity.pm.graphic.frames.GraphicManager$LookAndFeelAction.actionPerformed(GraphicManager.java:2705)
+	at org.pushingpixels.flamingo.api.common.AbstractCommandButton.fireActionPerformed(AbstractCommandButton.java:616)
+	at org.pushingpixels.flamingo.api.common.AbstractCommandButton$ActionHandler.actionPerformed(AbstractCommandButton.java:568)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at org.pushingpixels.flamingo.api.common.model.ActionRepeatableButtonModel.setPressed(ActionRepeatableButtonModel.java:123)
+	at org.pushingpixels.flamingo.internal.ui.common.BasicCommandButtonListener.mouseReleased(BasicCommandButtonListener.java:147)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ 
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ ./run-projectlibre.sh 
+Conf file /home/sdimaio/.projectlibre found
+opts:
+POD Version: 1.6.2 local version 1.6.2 updated=false java version=21
+mar 29, 2026 12:44:23 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:23 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:23 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=0, day=work day Thu Jan 01 01:00:00 CET 1970 2072056231
+WorkingHours
+
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 2072056231
+WorkingHours
+
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 930622118
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 930622118
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 930622118
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 930622118
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@74f15adb, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 930622118
+WorkingHours
+
+Range 0 - 8:0-12:0
+Range 1 - 13:0-17:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=0, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@550a0cea, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 1902763605
+WorkingHours
+
+Range 0 - 0:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=0, day=null
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=1, day=work day Thu Jan 01 01:00:00 CET 1970 1951253000
+WorkingHours
+
+Range 0 - 23:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=2, day=work day Thu Jan 01 01:00:00 CET 1970 1898315063
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=3, day=work day Thu Jan 01 01:00:00 CET 1970 1898315063
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=4, day=work day Thu Jan 01 01:00:00 CET 1970 1898315063
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=5, day=work day Thu Jan 01 01:00:00 CET 1970 1898315063
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+Range 2 - 23:0-0:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.setWeekDay, com.projity.pm.calendar.WorkWeek@216f5f6, dayNum=6, day=work day Thu Jan 01 01:00:00 CET 1970 1317084720
+WorkingHours
+
+Range 0 - 0:0-3:0
+Range 1 - 4:0-8:0
+
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@539bc074, from=com.projity.pm.calendar.WorkWeek@74f15adb
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.clone, com.projity.pm.calendar.WorkWeek@539bc074
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek()
+mar 29, 2026 12:44:24 PM com.projity.contrib.util.Log info
+INFO: WorkWeek.addDaysFrom, com.projity.pm.calendar.WorkWeek@1b45d8ab, from=com.projity.pm.calendar.WorkWeek@1c3f0ee8
+Project returned
+Document Frame Cleanup
+Exception in thread "AWT-EventQueue-0" java.lang.IllegalArgumentException: Can't remove JRibbon component
+	at org.pushingpixels.flamingo.api.ribbon.JRibbonFrame$RibbonFrameLayout.removeLayoutComponent(JRibbonFrame.java:109)
+	at java.desktop/java.awt.Container.removeAll(Container.java:1329)
+	at com.projity.pm.graphic.frames.StartupFactory.restart(StartupFactory.java:136)
+	at com.projity.pm.graphic.frames.GraphicManager$LookAndFeelAction.actionPerformed(GraphicManager.java:2705)
+	at org.pushingpixels.flamingo.api.common.AbstractCommandButton.fireActionPerformed(AbstractCommandButton.java:616)
+	at org.pushingpixels.flamingo.api.common.AbstractCommandButton$ActionHandler.actionPerformed(AbstractCommandButton.java:568)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at org.pushingpixels.flamingo.api.common.model.ActionRepeatableButtonModel.setPressed(ActionRepeatableButtonModel.java:123)
+	at org.pushingpixels.flamingo.internal.ui.common.BasicCommandButtonListener.mouseReleased(BasicCommandButtonListener.java:147)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+sdimaio@s227184:~/Applicazioni/mindware/github/projectlibre$ 
+
+

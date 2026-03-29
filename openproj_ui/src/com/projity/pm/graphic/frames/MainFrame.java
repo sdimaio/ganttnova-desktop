@@ -78,9 +78,10 @@ public class MainFrame extends JFrame implements FrameHolder{
 
 	public void init() {
 		if (Environment.isWindows()) // in windows, this is needed otherwise initial display has no frame
-		   setSize(1024, 768);
-		if (Environment.isMac()) setPreferredSize(new Dimension(1280, 768));
-		else setPreferredSize(new Dimension(1024, 768));
+		   setSize(1280, 800);
+		if (Environment.isMac()) setPreferredSize(new Dimension(1440, 900));
+		else setPreferredSize(new Dimension(1366, 860));
+		setMinimumSize(new Dimension(1100, 720));
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE/*DISPOSE_ON_CLOSE*/);
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {

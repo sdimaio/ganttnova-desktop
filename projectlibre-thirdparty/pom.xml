@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.projectlibre</groupId>
+		<artifactId>projectlibre-parent</artifactId>
+		<version>1.6.2-modernized-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>projectlibre-thirdparty</artifactId>
+	<packaging>jar</packaging>
+
+	<name>ProjectLibre Legacy Thirdparty Bundle</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>build-legacy-contrib-bundles</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<ant antfile="${project.basedir}/../openproj_contrib/build.xml" target="dist" inheritAll="false">
+									<property name="javac.source" value="${maven.compiler.source}" />
+									<property name="javac.target" value="${maven.compiler.target}" />
+									<property name="javac.encoding" value="${project.build.sourceEncoding}" />
+									<property name="javac.includeantruntime" value="false" />
+								</ant>
+							</target>
+						</configuration>
+					</execution>
+					<execution>
+						<id>assemble-thirdparty-jar</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<mkdir dir="${project.build.outputDirectory}" />
+								<unzip src="${project.basedir}/../openproj_contrib/openproj-contrib.jar" dest="${project.build.outputDirectory}" />
+								<unzip src="${project.basedir}/../openproj_contrib/openproj-script.jar" dest="${project.build.outputDirectory}" />
+								<unzip src="${project.basedir}/../openproj_contrib/openproj-reports.jar" dest="${project.build.outputDirectory}" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -102,21 +102,29 @@ public final class LicenseDialog extends AbstractDialog {
 
 	private JEditorPane createEditorPane(URL url,final int height) {
 		JEditorPane pane = null;
-		try {
-			pane = new JEditorPane(url) {
-			       public Dimension getPreferredSize() {
-			    	   return new Dimension(600,height); //TODO there are issues with the size, so i just make it correct here
-			          }
-			};
-		} catch (Exception e) {
-			if (!validated) {
-				Alert.error(Messages.getString("LicenseDialog.CouldNotLoadExiting")); //$NON-NLS-1$
-				System.exit(-1);
-			} else {
-				Alert.error(Messages.getString("LicenseDialog.CouldNotLoadLater")); //$NON-NLS-1$
-				return null;
-
+		if (url != null) {
+			try {
+				pane = new JEditorPane(url) {
+				       public Dimension getPreferredSize() {
+				    	    return new Dimension(600,height); //TODO there are issues with the size, so i just make it correct here
+				          }
+				};
+			} catch (Exception e) {
+				pane = null;
 			}
+		}
+		if (pane == null) {
+			// Missing legacy HTML should not abort the desktop application.
+			pane = new JEditorPane("text/html",
+				"<html><body style='font-family:sans-serif;padding:16px'>"
+				+ "<h2>" + Messages.getString("LicenseDialog.License") + "</h2>"
+				+ "<p>The legacy bundled license page is not available in this build.</p>"
+				+ "<p>ProjectLibre Modernized continues to run. Third-party notices remain available from the Help dialog and bundled resources.</p>"
+				+ "</body></html>") {
+				       public Dimension getPreferredSize() {
+				    	    return new Dimension(600,height);
+				          }
+				};
 		}
 
 		pane.setEditable(false);

@@ -26,8 +26,10 @@
 			classpathref="compile.class.path"
 			debug="off"
 			nowarn="on"
-			source="1.5"
-			target="1.5">
+			encoding="${javac.encoding}"
+			includeantruntime="${javac.includeantruntime}"
+			source="${javac.source}"
+			target="${javac.target}">
 				<src path="src" />
 				<include name="**/*" />
 		</javac>
@@ -96,6 +98,7 @@
 				<zipgroupfileset file="lib/jdnc-0_7-all.jar" /> 
 				<zipgroupfileset file="lib/itext.jar" /> 
 				<zipgroupfileset file="lib/trident-6.2.jar" /> 
+				<zipgroupfileset file="lib/jaxb/jaxb-api.jar" />
 				<zipgroupfileset file="lib/exchange/jakarta-poi.jar" /> 
 			</jar>
 		</else>

@@ -170,6 +170,12 @@ public class ResourceImpl implements Resource, HasAvailability, HasResourceIndic
 		getAvailabilityTable().setMaximumUnits(maxUnits);
 		//		globalResource.setMaximumUnits(maxUnits);
 	}
+	public double getDefaultAssignmentUnits() {
+		return globalResource.getDefaultAssignmentUnits();
+	}
+	public void setDefaultAssignmentUnits(double defaultAssignmentUnits) {
+		globalResource.setDefaultAssignmentUnits(defaultAssignmentUnits);
+	}
 
 
 	public ResourceImpl() {
@@ -696,6 +702,9 @@ public class ResourceImpl implements Resource, HasAvailability, HasResourceIndic
 	 * @see com.projity.pm.availability.HasAvailability#fieldHideMaximumUnits(com.projity.field.FieldContext)
 	 */
 	public boolean fieldHideMaximumUnits(FieldContext fieldContext) {
+		return fieldHideOvertimeRate(fieldContext);
+	}
+	public boolean fieldHideDefaultAssignmentUnits(FieldContext fieldContext) {
 		return fieldHideOvertimeRate(fieldContext);
 	}
 	public boolean fieldHideBaseCalendar(FieldContext fieldContext) {

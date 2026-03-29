@@ -966,7 +966,21 @@ public class NormalTask extends Task implements Allocation, TaskSpecificFields,
 			}
 		} else {
 			setWork(work);
+			approveCalculatedDuration(context);
 		}
+	}
+
+	public void setEffort(long effort, FieldContext context) {
+		setWork(Duration.millis(effort), context);
+		approveCalculatedDuration(context);
+	}
+
+	private void approveCalculatedDuration(FieldContext context) {
+		if (!isInitialized())
+			return;
+		if (FieldContext.isParseOnly(context) || FieldContext.isNoUpdate(context) || FieldContext.isScripting(context))
+			return;
+		setEstimated(false);
 	}
 
 	public void setWork(long work) {
@@ -1329,6 +1343,9 @@ public class NormalTask extends Task implements Allocation, TaskSpecificFields,
 	public boolean fieldHideWork(FieldContext fieldContext) {
 		return isFieldHidden(fieldContext);
 	}
+	public boolean fieldHideEffort(FieldContext fieldContext) {
+		return fieldHideWork(fieldContext);
+	}
 	public boolean fieldHideActualCost(FieldContext fieldContext) {
 		return isFieldHidden(fieldContext);
 	}
@@ -1390,6 +1407,9 @@ public class NormalTask extends Task implements Allocation, TaskSpecificFields,
 	public long getWork(FieldContext fieldContext) {
 		return work(FieldContext.start(fieldContext), FieldContext
 				.end(fieldContext));
+	}
+	public long getEffort(FieldContext fieldContext) {
+		return Duration.setAsDays(Duration.millis(getWork(fieldContext)));
 	}
 	public double getActualFixedCost(FieldContext fieldContext) {
 		return fixedCost(FieldContext.start(fieldContext), Math.min(getStop(),FieldContext // only up to completion
@@ -2061,6 +2081,10 @@ public class NormalTask extends Task implements Allocation, TaskSpecificFields,
 		if (fieldContext == null)
 			return false;
 		return !hasActiveAssignment(fieldContext.getStart(), fieldContext.getEnd());
+	}
+
+	public boolean isReadOnlyEffort(FieldContext fieldContext) {
+		return isReadOnlyWork(fieldContext);
 	}
 
 	public void setActualWork(long actualWork, FieldContext context) {

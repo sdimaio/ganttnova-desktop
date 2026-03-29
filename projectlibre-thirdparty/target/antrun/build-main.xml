@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <mkdir dir="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/target/classes" />
+    <unzip src="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/../openproj_contrib/openproj-contrib.jar" dest="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/target/classes" />
+    <unzip src="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/../openproj_contrib/openproj-script.jar" dest="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/target/classes" />
+    <unzip src="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/../openproj_contrib/openproj-reports.jar" dest="/home/sdimaio/Applicazioni/mindware/github/projectlibre/projectlibre-thirdparty/target/classes" />
+  </target>
+</project>

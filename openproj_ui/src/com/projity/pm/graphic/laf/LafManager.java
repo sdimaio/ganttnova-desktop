@@ -60,7 +60,11 @@ import javax.swing.JComponent;
 import javax.swing.JTabbedPane;
 import javax.swing.LookAndFeel;
 
+import com.projity.pm.graphic.frames.GraphicManager;
+
 public interface LafManager {
+
+	public abstract void setGraphicManager(GraphicManager graphicManager);
 
 	public abstract void clean();
 
@@ -87,6 +91,14 @@ public interface LafManager {
 	public abstract Color getSelectedBackgroundColor();
 	
 	public abstract Color getUnselectedBackgroundColor();
+
+	public abstract String[] getAvailableLookAndFeelIds();
+
+	public abstract String getPreferredLookAndFeelId();
+
+	public abstract String getLookAndFeelLabel(String lookAndFeelId);
+
+	public abstract boolean setPreferredLookAndFeel(String lookAndFeelId);
 
 	public abstract void dumpUIValues();
 	public boolean isToolbarOpaque();

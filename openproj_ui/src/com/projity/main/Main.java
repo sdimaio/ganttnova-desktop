@@ -65,6 +65,7 @@ import com.projity.util.Environment;
  */
 public class Main {
 	public static void main(String[] args) {
+		configureUiDefaults();
 		int runNumber=getRunNumber()+1;
 		long firstRun=getFirstRun();
 		Preferences.userNodeForPackage(Main.class).putInt("projectlibreRunNumber",runNumber);
@@ -100,6 +101,11 @@ public class Main {
 		} else formatedArgs=args;
 
 		com.projity.pm.graphic.gantt.Main.main(formatedArgs);
+	}
+	private static void configureUiDefaults() {
+		System.setProperty("apple.laf.useScreenMenuBar", "true");
+		System.setProperty("awt.useSystemAAFontSettings", "on");
+		System.setProperty("swing.aatext", "true");
 	}
 	public static int getRunNumber() {
 		return Preferences.userNodeForPackage(Main.class).getInt("projectlibreRunNumber",0);
